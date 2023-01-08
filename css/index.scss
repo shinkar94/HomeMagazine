@@ -2,8 +2,15 @@ body{
     padding: 0%;
     margin: 0%;
     border: 0;
-    color: rgb(255, 255, 255);
-    background-color: rgb(77, 77, 77);
+    background-color: rgb(255, 255, 255);
+    --boxOpen: 2px 2px 5px rgb(216, 216, 216),
+    inset -2px -2px 5px rgb(216, 216, 216),
+    inset 2px 2px 5px rgb(216, 216, 216);
+
+    --boxHover: inset -4px -4px 5px rgb(216, 216, 216),
+    inset 4px 4px 5px rgb(216, 216, 216);
+
+    --btnColShad: 2px 2px 5px rgb(0,0,0);
     header{
         .Toolbar{
             display: flex;
@@ -11,38 +18,111 @@ body{
             justify-content: space-around;
             padding: 10px;
             .btn{
-                width: 200px;
+                width: 25%;
                 cursor: pointer;
-                background-color: rgb(20, 20, 20);
-                color: rgb(255, 255, 255);
-                border-radius: 10px;
+                border: 0;
+                background-color: rgb(255, 255, 255);
+                box-shadow: var(--btnColShad);
             }
         }
     }
     main{
-        .Date{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            border: 4px outset black;
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: var(--btnColShad);
+        padding: 10px;
+        margin: 0px 10px;
+        border-radius: 10px;
+        .btnPanel, .bdInfo{
+            max-width: 15%;
+            box-shadow: var(--btnColShad);
+            border-radius: 5px;
         }
-        .operations{
-            display: flex;
-            table{
-                text-align: center;
-                width: 100%;
-                border: 2px solid black;
+        .btnPanel{
+            padding: 5px;
+            text-align: center;
+            .btnMenu{
+                height: 30px;
+                border-radius: 5px;
+                width: 80%;
+                border: 0;
+                margin-bottom: 4px;
+                cursor: pointer;
+                background-color: rgb(255,255,255);
+                box-shadow: var(--btnColShad);
+            }
+        }
+        .infoMain{
+            box-shadow: var(--btnColShad);
+            border-radius: 5px;
+            padding: 5px;
+            width: 70%;
+            .Date{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
                 border-radius: 10px;
-                padding: 2px;
-                tr{
-                    td{
-                        border: 2px solid black;
+                padding: 5px;
+                margin-bottom: 4px;
+                box-shadow: var(--btnColShad);
+                .tittleData, input, select, textarea,button{
+                    height: 20px;
+                    margin-bottom: 5px;
+                    margin-right: 4px;
+                    border: 0;
+                    padding: 4px;
+                    border-radius: 4px;
+                    box-shadow: var(--btnColShad);
+                    background-color: rgba(0, 0, 0, 0.651);
+                    color: rgb(3, 226, 59);
+                }
+                .tittleData, button{
+                    color: rgb(255,255,255);
+                }
+                input::placeholder, textarea::placeholder{
+                    color: rgb(3, 226, 59);
+                }
+                select{
+                    padding: 0px;
+                    height: 28px;
+                }
+                button{
+                    height: 28px;
+                    background-color: rgb(0, 173, 0);
+                }
+                .tittleData{
+                    width: 50px;
+                    font-size: 18px;
+                }
+                .incomeTitle{
+                    background-color: rgba(0, 128, 0, 0.74);
+                }
+                .expenseTitle{
+                    background-color: rgba(255, 0, 0, 0.733);
+                }
+            }
+            .operations{
+                display: flex;
+                table{
+                    text-align: center;
+                    width: 100%;
+                    box-shadow: var(--btnColShad);
+                    border-radius: 10px;
+                    padding: 2px;
+                    tr{
+                        td{
+                            box-shadow: var(--btnColShad);
+                        }
                     }
                 }
+            }
+        }
+        .bdInfo{
+            .itemBd{
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: var(--btnColShad);
             }
         }
     }

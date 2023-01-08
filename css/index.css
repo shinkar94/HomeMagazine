@@ -2,8 +2,13 @@ body {
   padding: 0%;
   margin: 0%;
   border: 0;
-  color: rgb(255, 255, 255);
-  background-color: rgb(77, 77, 77);
+  background-color: rgb(255, 255, 255);
+  --boxOpen: 2px 2px 5px rgb(216, 216, 216),
+  inset -2px -2px 5px rgb(216, 216, 216),
+  inset 2px 2px 5px rgb(216, 216, 216);
+  --boxHover: inset -4px -4px 5px rgb(216, 216, 216),
+  inset 4px 4px 5px rgb(216, 216, 216);
+  --btnColShad: 2px 2px 5px rgb(0,0,0);
 }
 body header .Toolbar {
   display: -webkit-box;
@@ -16,13 +21,55 @@ body header .Toolbar {
   padding: 10px;
 }
 body header .Toolbar .btn {
-  width: 200px;
+  width: 25%;
   cursor: pointer;
-  background-color: rgb(20, 20, 20);
-  color: rgb(255, 255, 255);
+  border: 0;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
+}
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
+  padding: 10px;
+  margin: 0px 10px;
   border-radius: 10px;
 }
-body main .Date {
+body main .btnPanel, body main .bdInfo {
+  max-width: 15%;
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
+  border-radius: 5px;
+}
+body main .btnPanel {
+  padding: 5px;
+  text-align: center;
+}
+body main .btnPanel .btnMenu {
+  height: 30px;
+  border-radius: 5px;
+  width: 80%;
+  border: 0;
+  margin-bottom: 4px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
+}
+body main .infoMain {
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
+  border-radius: 5px;
+  padding: 5px;
+  width: 70%;
+}
+body main .infoMain .Date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,23 +81,80 @@ body main .Date {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 4px outset black;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 4px;
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
 }
-body main .operations {
+body main .infoMain .Date .tittleData, body main .infoMain .Date input, body main .infoMain .Date select, body main .infoMain .Date textarea, body main .infoMain .Date button {
+  height: 20px;
+  margin-bottom: 5px;
+  margin-right: 4px;
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
+  background-color: rgba(0, 0, 0, 0.651);
+  color: rgb(3, 226, 59);
+}
+body main .infoMain .Date .tittleData, body main .infoMain .Date button {
+  color: rgb(255, 255, 255);
+}
+body main .infoMain .Date input::-webkit-input-placeholder, body main .infoMain .Date textarea::-webkit-input-placeholder {
+  color: rgb(3, 226, 59);
+}
+body main .infoMain .Date input::-moz-placeholder, body main .infoMain .Date textarea::-moz-placeholder {
+  color: rgb(3, 226, 59);
+}
+body main .infoMain .Date input:-ms-input-placeholder, body main .infoMain .Date textarea:-ms-input-placeholder {
+  color: rgb(3, 226, 59);
+}
+body main .infoMain .Date input::-ms-input-placeholder, body main .infoMain .Date textarea::-ms-input-placeholder {
+  color: rgb(3, 226, 59);
+}
+body main .infoMain .Date input::placeholder, body main .infoMain .Date textarea::placeholder {
+  color: rgb(3, 226, 59);
+}
+body main .infoMain .Date select {
+  padding: 0px;
+  height: 28px;
+}
+body main .infoMain .Date button {
+  height: 28px;
+  background-color: rgb(0, 173, 0);
+}
+body main .infoMain .Date .tittleData {
+  width: 50px;
+  font-size: 18px;
+}
+body main .infoMain .Date .incomeTitle {
+  background-color: rgba(0, 128, 0, 0.74);
+}
+body main .infoMain .Date .expenseTitle {
+  background-color: rgba(255, 0, 0, 0.733);
+}
+body main .infoMain .operations {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-body main .operations table {
+body main .infoMain .operations table {
   text-align: center;
   width: 100%;
-  border: 2px solid black;
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
   border-radius: 10px;
   padding: 2px;
 }
-body main .operations table tr td {
-  border: 2px solid black;
+body main .infoMain .operations table tr td {
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
+}
+body main .bdInfo .itemBd {
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: var(--btnColShad);
+          box-shadow: var(--btnColShad);
 }
