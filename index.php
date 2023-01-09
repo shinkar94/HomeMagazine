@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <?php 
+        $conn = new mysqli('localhost','root','','homemagazine');
+        $database_query   = mysqli_query($conn, "SELECT `money`,`Operation` FROM `movement` WHERE `id` = '1' ");
+        $database_result  = mysqli_fetch_assoc($database_query);
+        echo'<h1>'.$database_result['money'].'</h1>';
+        echo'<h3>'.$database_result['Operation'].'</h3>'; 
+    ?>
     <header>
         <div class="Toolbar">
             <button class="btn btnBar"><img src="" alt=""><p>Список Доходов</p></button>
