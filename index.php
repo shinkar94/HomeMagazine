@@ -9,11 +9,11 @@
 </head>
 <body>
     <?php 
-        $conn = new mysqli('localhost','root','','homemagazine');
-        $database_query   = mysqli_query($conn, "SELECT `money`,`Operation` FROM `movement` WHERE `id` = '1' ");
-        $database_result  = mysqli_fetch_assoc($database_query);
-        echo'<h1>'.$database_result['money'].'</h1>';
-        echo'<h3>'.$database_result['Operation'].'</h3>'; 
+        $conn = new mysqli('localhost','root','root','homemagazine');
+        $database_query   = mysqli_query($conn, "SELECT * FROM `movement` ");
+        // $database_result  = mysqli_fetch_assoc($database_query);
+        // echo'<h1>'.$database_result['money'].'</h1>';
+        // echo'<h3>'.$database_result['Operation'].'</h3>'; 
     ?>
     <header>
         <div class="Toolbar">
@@ -63,18 +63,17 @@
                         <td>Операция</td>
                         <td>Имя журнала учёта</td>
                     </tr>
-                    <tr>
-                        <td>08.01.2023</td>
-                        <td>1000</td>
-                        <td>Доход</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>08.01.2023</td>
-                        <td>500</td>
-                        <td>Расход</td>
-                        <td>Авто</td>
-                    </tr>
+                    <?php
+                        while($row = mysqli_fetch_assoc($database_query)){
+                            echo '<tr>
+                                <td>'.$row['date'].'</td>
+                                <td>'.$row['money'].'</td>
+                                <td>'.$row['Operation'].'</td>
+                                <td>'.$row['Journal name'].'</td>
+                            </tr>';
+                        }
+
+                    ?>
                 </table>
             </div>
         </div>
