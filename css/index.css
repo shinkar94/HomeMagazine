@@ -171,18 +171,30 @@ body main .infoMain .operations {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 500px;
+  overflow: auto;
 }
 body main .infoMain .operations table {
+  border-collapse: collapse;
+  border-spacing: 0;
   text-align: center;
   width: 100%;
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
-  border-radius: 10px;
   padding: 2px;
 }
 body main .infoMain .operations table tr td {
+  font-size: 18px;
+  height: 40px;
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
+  background-color: var(--backgroundBtnHover);
+}
+body main .infoMain .operations table thead {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(250, 250, 250);
+  position: sticky;
+  top: 0;
 }
 body main .bdInfo .itemBd {
   padding: 5px;

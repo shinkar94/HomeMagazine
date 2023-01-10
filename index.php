@@ -61,12 +61,15 @@
             </div>
             <div class="operations">
                 <table>
-                    <tr>
-                        <td>Дата</td>
-                        <td>СУММА</td>
-                        <td>Операция</td>
-                        <td>Имя журнала учёта</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <td>Дата</td>
+                            <td>СУММА</td>
+                            <td>Операция</td>
+                            <td>Имя журнала учёта</td>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <?php
                         while($row = mysqli_fetch_assoc($database_query)){
                             echo '<tr>
@@ -78,6 +81,7 @@
                         }
 
                     ?>
+                    </tbody>
                 </table>
             </div>
         </div>
