@@ -1,1 +1,1 @@
-console.log("connect")
+import * as sendOperation from "./sendNewOperation.js";

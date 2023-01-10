@@ -2,7 +2,10 @@ body {
   padding: 0%;
   margin: 0%;
   border: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(240, 242, 250);
+  --backgroundBlock: rgb(250,250,250);
+  --backgroundBtnHover: rgba(0, 71, 179, 0.3);
+  --bkgActBtnHov: rgba(0, 71, 179, 0.7);
   --boxOpen: 2px 2px 5px rgb(216, 216, 216),
   inset -2px -2px 5px rgb(216, 216, 216),
   inset 2px 2px 5px rgb(216, 216, 216);
@@ -40,6 +43,7 @@ body main {
   padding: 10px;
   margin: 0px 10px;
   border-radius: 10px;
+  background-color: var(--backgroundBlock);
 }
 body main .btnPanel, body main .bdInfo {
   max-width: 15%;
@@ -48,19 +52,24 @@ body main .btnPanel, body main .bdInfo {
   border-radius: 5px;
 }
 body main .btnPanel {
-  padding: 5px;
+  padding: 5px 0px 0px 0px;
   text-align: center;
 }
 body main .btnPanel .btnMenu {
+  width: 100%;
   height: 30px;
   border-radius: 5px;
-  width: 80%;
   border: 0;
   margin-bottom: 4px;
   cursor: pointer;
   background-color: rgb(255, 255, 255);
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
+  background-color: var(--backgroundBtnHover);
+}
+body main .btnPanel .btnMenu:hover {
+  background-color: var(--bkgActBtnHov);
+  color: rgb(250, 250, 250);
 }
 body main .infoMain {
   -webkit-box-shadow: var(--btnColShad);
@@ -69,7 +78,7 @@ body main .infoMain {
   padding: 5px;
   width: 70%;
 }
-body main .infoMain .Date {
+body main .infoMain .Date_Info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,16 +87,31 @@ body main .infoMain .Date {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+body main .infoMain .Date_Info .Date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
   padding: 5px;
-  margin-bottom: 4px;
+  margin: 4px;
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
 }
-body main .infoMain .Date .tittleData, body main .infoMain .Date input, body main .infoMain .Date select, body main .infoMain .Date textarea, body main .infoMain .Date button {
+body main .infoMain .Date_Info .Date .tittleData, body main .infoMain .Date_Info .Date input, body main .infoMain .Date_Info .Date select, body main .infoMain .Date_Info .Date textarea, body main .infoMain .Date_Info .Date button {
+  width: 90%;
   height: 20px;
   margin-bottom: 5px;
   margin-right: 4px;
@@ -97,43 +121,51 @@ body main .infoMain .Date .tittleData, body main .infoMain .Date input, body mai
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
   background-color: rgba(0, 0, 0, 0.651);
-  color: rgb(3, 226, 59);
-}
-body main .infoMain .Date .tittleData, body main .infoMain .Date button {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date input::-webkit-input-placeholder, body main .infoMain .Date textarea::-webkit-input-placeholder {
-  color: rgb(3, 226, 59);
+body main .infoMain .Date_Info .Date .tittleData, body main .infoMain .Date_Info .Date button {
+  color: rgb(255, 255, 255);
 }
-body main .infoMain .Date input::-moz-placeholder, body main .infoMain .Date textarea::-moz-placeholder {
-  color: rgb(3, 226, 59);
+body main .infoMain .Date_Info .Date input::-webkit-input-placeholder, body main .infoMain .Date_Info .Date textarea::-webkit-input-placeholder {
+  color: rgb(255, 255, 255);
 }
-body main .infoMain .Date input:-ms-input-placeholder, body main .infoMain .Date textarea:-ms-input-placeholder {
-  color: rgb(3, 226, 59);
+body main .infoMain .Date_Info .Date input::-moz-placeholder, body main .infoMain .Date_Info .Date textarea::-moz-placeholder {
+  color: rgb(255, 255, 255);
 }
-body main .infoMain .Date input::-ms-input-placeholder, body main .infoMain .Date textarea::-ms-input-placeholder {
-  color: rgb(3, 226, 59);
+body main .infoMain .Date_Info .Date input:-ms-input-placeholder, body main .infoMain .Date_Info .Date textarea:-ms-input-placeholder {
+  color: rgb(255, 255, 255);
 }
-body main .infoMain .Date input::placeholder, body main .infoMain .Date textarea::placeholder {
-  color: rgb(3, 226, 59);
+body main .infoMain .Date_Info .Date input::-ms-input-placeholder, body main .infoMain .Date_Info .Date textarea::-ms-input-placeholder {
+  color: rgb(255, 255, 255);
 }
-body main .infoMain .Date select {
+body main .infoMain .Date_Info .Date input::placeholder, body main .infoMain .Date_Info .Date textarea::placeholder {
+  color: rgb(255, 255, 255);
+}
+body main .infoMain .Date_Info .Date select {
+  width: 94%;
   padding: 0px;
   height: 28px;
 }
-body main .infoMain .Date button {
+body main .infoMain .Date_Info .Date button {
+  width: 94%;
   height: 28px;
   background-color: rgb(0, 173, 0);
 }
-body main .infoMain .Date .tittleData {
+body main .infoMain .Date_Info .Date .tittleData {
   width: 50px;
   font-size: 18px;
 }
-body main .infoMain .Date .incomeTitle {
+body main .infoMain .Date_Info .Date .incomeTitle {
   background-color: rgba(0, 128, 0, 0.74);
 }
-body main .infoMain .Date .expenseTitle {
+body main .infoMain .Date_Info .Date .expenseTitle {
   background-color: rgba(255, 0, 0, 0.733);
+}
+body main .infoMain .Date_Info .incomeData {
+  background-color: rgba(0, 173, 0, 0.3);
+}
+body main .infoMain .Date_Info .expenseData {
+  background-color: rgba(173, 0, 0, 0.301);
 }
 body main .infoMain .operations {
   display: -webkit-box;

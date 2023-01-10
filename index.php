@@ -31,29 +31,33 @@
             <button class="btnMenu">Send</button>
         </div>
         <div class="infoMain sendInfo">
-            <div class="Date incomeData">
-                <div class="tittleData incomeTitle">Доход</div>
-                <select class="incomeName">
-                    <option value="1">Зарплата(Ованс)</option>
-                    <option value="2">Зарплата</option>
-                    <option value="3">ИП</option>
-                    <option value="4">Другое</option>
-                </select>
-                <input type="text" class="sumIncome" placeholder="СУММА">
-                <textarea class="description" placeholder="Описание"></textarea>
-                <button class="btnSendIncome">Отправить</button> 
-            </div>
-            <div class="Date expenseData">
-                <div class="tittleData expenseTitle">Расход</div>
-                <select class="expenseName">
-                    <option value="1">Зарплата(Ованс)</option>
-                    <option value="2">Зарплата</option>
-                    <option value="3">ИП</option>
-                    <option value="4">Другое</option>
-                </select>
-                <input type="text" class="sumExpense" placeholder="СУММА">
-                <textarea class="description" placeholder="Описание"></textarea>
-                <button class="btnSendExpense">Отправить</button>
+            <div class="Date_Info">
+                <div class="Date incomeData">
+                    <div class="tittleData title">Доход</div>
+                    <input type="date" class="dateSend">
+                    <select class="opirationName">
+                        <option value="1">Зарплата(Ованс)</option>
+                        <option value="2">Зарплата</option>
+                        <option value="3">ИП</option>
+                        <option value="4">Другое</option>
+                    </select>
+                    <input type="text" class="sum" placeholder="СУММА">
+                    <textarea class="description" placeholder="Описание"></textarea>
+                    <button class="btnSend">Отправить</button> 
+                </div>
+                <div class="Date expenseData">
+                    <div class="tittleData title">Расход</div>
+                    <input type="date" class="dateSend">
+                    <select class="opirationName">
+                        <option value="1">Зарплата(Ованс)</option>
+                        <option value="2">Зарплата</option>
+                        <option value="3">ИП</option>
+                        <option value="4">Другое</option>
+                    </select>
+                    <input type="text" class="sum" placeholder="СУММА">
+                    <textarea class="description" placeholder="Описание"></textarea>
+                    <button class="btnSend">Отправить</button>
+                </div>
             </div>
             <div class="operations">
                 <table>
