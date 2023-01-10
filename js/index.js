@@ -1,1 +1,1 @@
-import * as sendOperation from "./sendNewOperation.js";
+import * as sendOperation from "./contentOperation.js";

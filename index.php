@@ -43,7 +43,7 @@
                     </select>
                     <input type="text" class="sum" placeholder="СУММА">
                     <textarea class="description" placeholder="Описание"></textarea>
-                    <button class="btnSend">Отправить</button> 
+                    <button class="btnSend incomeBtn">Отправить</button> 
                 </div>
                 <div class="Date expenseData">
                     <div class="tittleData title">Расход</div>
@@ -56,7 +56,7 @@
                     </select>
                     <input type="text" class="sum" placeholder="СУММА">
                     <textarea class="description" placeholder="Описание"></textarea>
-                    <button class="btnSend">Отправить</button>
+                    <button class="btnSend expenseBtn">Отправить</button>
                 </div>
             </div>
             <div class="operations">
