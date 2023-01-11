@@ -31,28 +31,40 @@
             <button class="btnMenu">Send</button>
         </div>
         <div class="infoMain sendInfo">
-            <div class="Date_Info">
-                <div class="Date incomeData">
+            <div class="Data_Info">
+                <div class="Data incomeData">
                     <div class="tittleData title">Доход</div>
                     <input type="date" class="dateSend">
                     <select class="opirationName">
-                        <option value="1">Зарплата(Ованс)</option>
-                        <option value="2">Зарплата</option>
-                        <option value="3">ИП</option>
-                        <option value="4">Другое</option>
+                        <option></option>
+                        <option>Зарплата(Ованс) Рома</option>
+                        <option>Зарплата(Ованс) Катя</option>
+                        <option>Зарплата Рома</option>
+                        <option>Зарплата Катя</option>
+                        <option>ИП</option>
+                        <option>Другое</option>
                     </select>
                     <input type="text" class="sum" placeholder="СУММА">
                     <textarea class="description" placeholder="Описание"></textarea>
                     <button class="btnSend incomeBtn">Отправить</button> 
                 </div>
-                <div class="Date expenseData">
+                <div class="Data expenseData">
                     <div class="tittleData title">Расход</div>
                     <input type="date" class="dateSend">
                     <select class="opirationName">
-                        <option value="1">Зарплата(Ованс)</option>
-                        <option value="2">Зарплата</option>
-                        <option value="3">ИП</option>
-                        <option value="4">Другое</option>
+                        <option></option>
+                        <option>Продукты</option>
+                        <option>Бытовая химия</option>
+                        <option>Зверюшки</option>
+                        <option>Здоровье</option>
+                        <option>Кредиты и Рассрочки</option>
+                        <option>Жильё</option>
+                        <option>Топливо</option>
+                        <option>Авто</option>
+                        <option>Бьюти</option>
+                        <option>Образование</option>
+                        <option>Подарки</option>
+                        <option>Такси</option>
                     </select>
                     <input type="text" class="sum" placeholder="СУММА">
                     <textarea class="description" placeholder="Описание"></textarea>
@@ -66,7 +78,8 @@
                             <td>Дата</td>
                             <td>СУММА</td>
                             <td>Операция</td>
-                            <td>Имя журнала учёта</td>
+                            <td>Статья</td>
+                            <td>Описание</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,9 +87,10 @@
                         while($row = mysqli_fetch_assoc($database_query)){
                             echo '<tr>
                                 <td>'.$row['date'].'</td>
-                                <td>'.$row['money'].'</td>
+                                <td>'.$row['money'].' BYN</td>
                                 <td>'.$row['Operation'].'</td>
-                                <td>'.$row['Journal name'].'</td>
+                                <td>'.$row['Journal_Name'].'</td>
+                                <td>'.$row['description'].'</td>
                             </tr>';
                         }
 

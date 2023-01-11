@@ -78,7 +78,7 @@ body main .infoMain {
   padding: 5px;
   width: 70%;
 }
-body main .infoMain .Date_Info {
+body main .infoMain .Data_Info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +88,7 @@ body main .infoMain .Date_Info {
       -ms-flex-pack: center;
           justify-content: center;
 }
-body main .infoMain .Date_Info .Date {
+body main .infoMain .Data_Info .Data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +110,7 @@ body main .infoMain .Date_Info .Date {
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
 }
-body main .infoMain .Date_Info .Date .tittleData, body main .infoMain .Date_Info .Date input, body main .infoMain .Date_Info .Date select, body main .infoMain .Date_Info .Date textarea, body main .infoMain .Date_Info .Date button {
+body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data input, body main .infoMain .Data_Info .Data select, body main .infoMain .Data_Info .Data textarea, body main .infoMain .Data_Info .Data button {
   width: 90%;
   height: 20px;
   margin-bottom: 5px;
@@ -123,48 +123,48 @@ body main .infoMain .Date_Info .Date .tittleData, body main .infoMain .Date_Info
   background-color: rgba(0, 0, 0, 0.651);
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date_Info .Date .tittleData, body main .infoMain .Date_Info .Date button {
+body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data button {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date_Info .Date input::-webkit-input-placeholder, body main .infoMain .Date_Info .Date textarea::-webkit-input-placeholder {
+body main .infoMain .Data_Info .Data input::-webkit-input-placeholder, body main .infoMain .Data_Info .Data textarea::-webkit-input-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date_Info .Date input::-moz-placeholder, body main .infoMain .Date_Info .Date textarea::-moz-placeholder {
+body main .infoMain .Data_Info .Data input::-moz-placeholder, body main .infoMain .Data_Info .Data textarea::-moz-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date_Info .Date input:-ms-input-placeholder, body main .infoMain .Date_Info .Date textarea:-ms-input-placeholder {
+body main .infoMain .Data_Info .Data input:-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea:-ms-input-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date_Info .Date input::-ms-input-placeholder, body main .infoMain .Date_Info .Date textarea::-ms-input-placeholder {
+body main .infoMain .Data_Info .Data input::-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea::-ms-input-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date_Info .Date input::placeholder, body main .infoMain .Date_Info .Date textarea::placeholder {
+body main .infoMain .Data_Info .Data input::placeholder, body main .infoMain .Data_Info .Data textarea::placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Date_Info .Date select {
+body main .infoMain .Data_Info .Data select {
   width: 94%;
   padding: 0px;
   height: 28px;
 }
-body main .infoMain .Date_Info .Date button {
+body main .infoMain .Data_Info .Data button {
   width: 94%;
   height: 28px;
   background-color: rgb(0, 173, 0);
 }
-body main .infoMain .Date_Info .Date .tittleData {
+body main .infoMain .Data_Info .Data .tittleData {
   width: 50px;
   font-size: 18px;
 }
-body main .infoMain .Date_Info .Date .incomeTitle {
+body main .infoMain .Data_Info .Data .incomeTitle {
   background-color: rgba(0, 128, 0, 0.74);
 }
-body main .infoMain .Date_Info .Date .expenseTitle {
+body main .infoMain .Data_Info .Data .expenseTitle {
   background-color: rgba(255, 0, 0, 0.733);
 }
-body main .infoMain .Date_Info .incomeData {
+body main .infoMain .Data_Info .incomeData {
   background-color: rgba(0, 173, 0, 0.3);
 }
-body main .infoMain .Date_Info .expenseData {
+body main .infoMain .Data_Info .expenseData {
   background-color: rgba(173, 0, 0, 0.301);
 }
 body main .infoMain .operations {
