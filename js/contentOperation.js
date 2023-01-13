@@ -32,7 +32,7 @@ function updateTable(){
     const TABLE_OP = document.querySelector(".operations");
 
     let x = new XMLHttpRequest;
-    x.open('POST', 'modalWindow/modalEditPunkt.php');
+    x.open('POST', 'modules/tableOperation.php');
     const params = "inf=" + "go";
     x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     x.send(params);
