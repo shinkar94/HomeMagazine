@@ -150,6 +150,7 @@ body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Inf
   width: 94%;
   height: 28px;
   background-color: rgb(0, 173, 0);
+  cursor: pointer;
 }
 body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Info .tittleData {
   width: 50px;
