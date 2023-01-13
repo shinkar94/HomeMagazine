@@ -10,7 +10,7 @@
 <body>
     <?php 
         $conn = new mysqli('localhost','root','root','homemagazine');
-        $database_query   = mysqli_query($conn, "SELECT * FROM `movement` ");
+        $database_query   = mysqli_query($conn, "SELECT * FROM `movement` order by `date` desc");
         // $database_result  = mysqli_fetch_assoc($database_query);
         // echo'<h1>'.$database_result['money'].'</h1>';
         // echo'<h3>'.$database_result['Operation'].'</h3>'; 
