@@ -28,22 +28,18 @@ dataOperation.forEach(e => {
     })
 });
 
-
 function updateTable(){
-    document.location.reload();
-    // let x = new XMLHttpRequest;
-    // x.open('POST', 'modalWindow/modalEditPunkt.php');
-    // const params = "data=" + massText;
-    // x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    // x.send(params);
-    // x.onreadystatechange = function () {
-    //     if (x.status == 200 && x.readyState == 4) {
-    //         let post = x.responseText;
-    //         wrapEditPunkt.innerHTML = post;
-    //         if(state === "AFTER"){dinamicModal("AFTER");}else{dinamicModal("BEFORE");}
-    //         dinamicEditPunkt();
-    //         wrapEditPunkt.style.cssText = `top: 2%;`;
-    //         shadowLTwo.style.cssText = `z-Index: 3;opacity: 1;`;
-    //     }
-    // }
+    const TABLE_OP = document.querySelector(".operations");
+
+    let x = new XMLHttpRequest;
+    x.open('POST', 'modalWindow/modalEditPunkt.php');
+    const params = "inf=" + "go";
+    x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    x.send(params);
+    x.onreadystatechange = function () {
+        if (x.status == 200 && x.readyState == 4) {
+            let post = x.responseText;
+            TABLE_OP.innerHTML = post;
+        }
+    }
 }

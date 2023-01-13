@@ -9,12 +9,9 @@
 </head>
 <body>
     <?php 
-        $conn = new mysqli('localhost','root','root','homemagazine');
-        $database_query   = mysqli_query($conn, "SELECT * FROM `movement` order by `date` desc");
-        // $database_result  = mysqli_fetch_assoc($database_query);
-        // echo'<h1>'.$database_result['money'].'</h1>';
-        // echo'<h3>'.$database_result['Operation'].'</h3>'; 
-    ?>
+        // $conn = new mysqli('localhost','root','root','homemagazine');
+        // $database_query   = mysqli_query($conn, "SELECT * FROM `movement` order by `date` desc");
+    echo '
     <header>
         <div class="Toolbar">
             <button class="btn btnBar"><img src="" alt=""><p>Список Доходов</p></button>
@@ -69,38 +66,16 @@
                         <option>Образование</option>
                         <option>Подарки</option>
                         <option>Такси</option>
+                        <option>Другое</option>
                     </select>
                     <input type="text" class="sum" placeholder="СУММА">
                     <textarea class="description" placeholder="Описание"></textarea>
                     <button class="btnSend expenseBtn">Отправить</button>
                 </div>
             </div>
-            <div class="operations">
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Дата</td>
-                            <td>СУММА</td>
-                            <td>Операция</td>
-                            <td>Статья</td>
-                            <td>Описание</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                        while($row = mysqli_fetch_assoc($database_query)){
-                            echo '<tr>
-                                <td>'.$row['date'].'</td>
-                                <td>'.$row['money'].' BYN</td>
-                                <td>'.$row['Operation'].'</td>
-                                <td>'.$row['Journal_Name'].'</td>
-                                <td>'.$row['description'].'</td>
-                            </tr>';
-                        }
-
-                    ?>
-                    </tbody>
-                </table>
+            <div class="operations">';
+                require "modules/tableOperation.php";
+            echo '
             </div>
         </div>
         <div class="infoMain bdInfo">
@@ -118,7 +93,9 @@
             </div>
         </div>
         
-    </main>
+    </main>';
+    // $conn->close();
+    ?>
 
     <script type="module" src="js/index.js"></script>
 </body>

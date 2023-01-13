@@ -5,11 +5,12 @@
     $description = $_POST['description'];
     $statusSend = $_POST['statusSend'];
 
-    if($statusSend == "incomeData"){
+    if($statusSend == "incomeBtn"){
         $globalOP = "Доход";
     }else{
         $globalOP = "Расход";
     }
+    echo $globalOP;
 
     if(strlen($opirationName) > 0){
         $mysql = new mysqli('localhost','root','root','homemagazine');
