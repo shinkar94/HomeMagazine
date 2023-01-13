@@ -72,7 +72,7 @@ body{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                .Data{
+                .Data, .Info{
                     display: flex;
                     flex-wrap: wrap;
                     flex-direction: column;
@@ -121,6 +121,19 @@ body{
                         background-color: rgba(255, 0, 0, 0.733);
                     }
                 }
+                .Info{
+                    background-color: rgba(0, 0, 0, 0.3);
+                    & p{
+                        color: rgba(251, 255, 5, 0.897);
+                        font-size: 34px;
+                        text-shadow: 0px 1px rgb(0,0,0);  
+                    }
+                    & .title{
+                        text-align: center;
+                        width: 80%;
+                    }
+                    
+                }
                 .incomeData{
                     background-color: rgba(0, 173, 0, 0.3);
                 }
@@ -166,4 +179,3 @@ body{
         }
     }
 }
-

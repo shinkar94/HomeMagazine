@@ -32,6 +32,10 @@
         </div>
         <div class="infoMain sendInfo">
             <div class="Data_Info">
+                <div class="Info remainderData">
+                    <div class="tittleData title">Остаток</div>
+                    <p>500 BYN</p>
+                </div>
                 <div class="Data incomeData">
                     <div class="tittleData title">Доход</div>
                     <input type="date" class="dateSend">

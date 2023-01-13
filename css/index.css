@@ -88,7 +88,7 @@ body main .infoMain .Data_Info {
       -ms-flex-pack: center;
           justify-content: center;
 }
-body main .infoMain .Data_Info .Data {
+body main .infoMain .Data_Info .Data, body main .infoMain .Data_Info .Info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +110,7 @@ body main .infoMain .Data_Info .Data {
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
 }
-body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data input, body main .infoMain .Data_Info .Data select, body main .infoMain .Data_Info .Data textarea, body main .infoMain .Data_Info .Data button {
+body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data input, body main .infoMain .Data_Info .Data select, body main .infoMain .Data_Info .Data textarea, body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info .tittleData, body main .infoMain .Data_Info .Info input, body main .infoMain .Data_Info .Info select, body main .infoMain .Data_Info .Info textarea, body main .infoMain .Data_Info .Info button {
   width: 90%;
   height: 20px;
   margin-bottom: 5px;
@@ -123,43 +123,55 @@ body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info
   background-color: rgba(0, 0, 0, 0.651);
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data button {
+body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info .tittleData, body main .infoMain .Data_Info .Info button {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Data_Info .Data input::-webkit-input-placeholder, body main .infoMain .Data_Info .Data textarea::-webkit-input-placeholder {
+body main .infoMain .Data_Info .Data input::-webkit-input-placeholder, body main .infoMain .Data_Info .Data textarea::-webkit-input-placeholder, body main .infoMain .Data_Info .Info input::-webkit-input-placeholder, body main .infoMain .Data_Info .Info textarea::-webkit-input-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Data_Info .Data input::-moz-placeholder, body main .infoMain .Data_Info .Data textarea::-moz-placeholder {
+body main .infoMain .Data_Info .Data input::-moz-placeholder, body main .infoMain .Data_Info .Data textarea::-moz-placeholder, body main .infoMain .Data_Info .Info input::-moz-placeholder, body main .infoMain .Data_Info .Info textarea::-moz-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Data_Info .Data input:-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea:-ms-input-placeholder {
+body main .infoMain .Data_Info .Data input:-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea:-ms-input-placeholder, body main .infoMain .Data_Info .Info input:-ms-input-placeholder, body main .infoMain .Data_Info .Info textarea:-ms-input-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Data_Info .Data input::-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea::-ms-input-placeholder {
+body main .infoMain .Data_Info .Data input::-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea::-ms-input-placeholder, body main .infoMain .Data_Info .Info input::-ms-input-placeholder, body main .infoMain .Data_Info .Info textarea::-ms-input-placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Data_Info .Data input::placeholder, body main .infoMain .Data_Info .Data textarea::placeholder {
+body main .infoMain .Data_Info .Data input::placeholder, body main .infoMain .Data_Info .Data textarea::placeholder, body main .infoMain .Data_Info .Info input::placeholder, body main .infoMain .Data_Info .Info textarea::placeholder {
   color: rgb(255, 255, 255);
 }
-body main .infoMain .Data_Info .Data select {
+body main .infoMain .Data_Info .Data select, body main .infoMain .Data_Info .Info select {
   width: 94%;
   padding: 0px;
   height: 28px;
 }
-body main .infoMain .Data_Info .Data button {
+body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info button {
   width: 94%;
   height: 28px;
   background-color: rgb(0, 173, 0);
 }
-body main .infoMain .Data_Info .Data .tittleData {
+body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Info .tittleData {
   width: 50px;
   font-size: 18px;
 }
-body main .infoMain .Data_Info .Data .incomeTitle {
+body main .infoMain .Data_Info .Data .incomeTitle, body main .infoMain .Data_Info .Info .incomeTitle {
   background-color: rgba(0, 128, 0, 0.74);
 }
-body main .infoMain .Data_Info .Data .expenseTitle {
+body main .infoMain .Data_Info .Data .expenseTitle, body main .infoMain .Data_Info .Info .expenseTitle {
   background-color: rgba(255, 0, 0, 0.733);
+}
+body main .infoMain .Data_Info .Info {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body main .infoMain .Data_Info .Info p {
+  color: rgba(251, 255, 5, 0.897);
+  font-size: 34px;
+  text-shadow: 0px 1px rgb(0, 0, 0);
+}
+body main .infoMain .Data_Info .Info .title {
+  text-align: center;
+  width: 80%;
 }
 body main .infoMain .Data_Info .incomeData {
   background-color: rgba(0, 173, 0, 0.3);
