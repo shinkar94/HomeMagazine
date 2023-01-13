@@ -1,7 +1,8 @@
 <?php
 
     $conn = new mysqli('localhost','root','root','homemagazine');
-    $database_query   = mysqli_query($conn, "SELECT * FROM `movement` order by `date` desc");
+    $database_query   = mysqli_query($conn, "SELECT DATE_FORMAT(`date`, '%d.%m.%Y') as dateOp, `money`, `Operation`,`Journal_Name`, `description`  
+    FROM `movement` order by `date` desc");
     echo '
     <table>
         <thead>
@@ -16,7 +17,7 @@
         <tbody>';
             while($row = mysqli_fetch_assoc($database_query)){
                 echo '<tr>
-                    <td>'.$row['date'].'</td>
+                    <td>'.$row['dateOp'].'</td>
                     <td>'.$row['money'].' BYN</td>
                     <td>'.$row['Operation'].'</td>
                     <td>'.$row['Journal_Name'].'</td>
