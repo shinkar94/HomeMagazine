@@ -9,8 +9,9 @@
 </head>
 <body>
     <?php 
-        // $conn = new mysqli('localhost','root','root','homemagazine');
-        // $database_query   = mysqli_query($conn, "SELECT * FROM `movement` order by `date` desc");
+        $connMoney = new mysqli('localhost','root','root','homemagazine');
+        $db_money = mysqli_query($connMoney, "SELECT SUM(`money`) as countMoney FROM `movement` WHERE `Operation` = 'Доход' ");
+        $countDb = mysqli_fetch_assoc($db_money);
     echo '
     <header>
         <div class="Toolbar">
@@ -31,7 +32,7 @@
             <div class="Data_Info">
                 <div class="Info remainderData">
                     <div class="tittleData title">Остаток</div>
-                    <p>500 BYN</p>
+                    <p>'.$countDb['countMoney'].'BYN</p>
                     <p>500 RUB</p>
                     <p>500 USD</p>
                     <p>500 EUR</p>
