@@ -10,7 +10,11 @@
 <body>
     <?php 
         $connMoney = new mysqli('localhost','root','root','homemagazine');
-        $db_money = mysqli_query($connMoney, "SELECT SUM(`money`) as countMoney FROM `movement` WHERE `Operation` = 'Доход' ");
+        $db_money = mysqli_query($connMoney,
+            "SELECT 
+            (SELECT SUM(a.money) FROM `movement` a WHERE a.Operation = 'Доход') -
+            (SELECT SUM(b.money) FROM `movement` b WHERE b.Operation = 'Расход') as countMoney"
+        );
         $countDb = mysqli_fetch_assoc($db_money);
     echo '
     <header>
@@ -32,10 +36,10 @@
             <div class="Data_Info">
                 <div class="Info remainderData">
                     <div class="tittleData title">Остаток</div>
-                    <p>'.$countDb['countMoney'].'BYN</p>
-                    <p>500 RUB</p>
-                    <p>500 USD</p>
-                    <p>500 EUR</p>
+                    <div class="countMoney"><img src="img/flag/byn.png" alt="flagMoney"><p>'.$countDb['countMoney'].'</p><p class="flagName">BYN</p></div>
+                    <div class="countMoney"><img src="img/flag/usd.png" alt="flagMoney"><p>'.round($countDb['countMoney'] / 2.63).'</p><p class="flagName">USD</p></div>
+                    <div class="countMoney"><img src="img/flag/eur.png" alt="flagMoney"><p>'.round($countDb['countMoney'] / 2.80).'</p><p class="flagName">EUR</p></div>
+                    <div class="countMoney"><img src="img/flag/rub.png" alt="flagMoney"><p>'.round(($countDb['countMoney'] / 3.8) * 100).'</p><p class="flagName">RUB</p></div>
                 </div>
                 <div class="Data incomeData">
                     <div class="tittleData title">Доход</div>
@@ -70,6 +74,7 @@
                         <option>Образование</option>
                         <option>Подарки</option>
                         <option>Такси</option>
+                        <option>Кафе</option>
                         <option>Другое</option>
                     </select>
                     <input type="text" class="sum" placeholder="СУММА">
