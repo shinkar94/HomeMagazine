@@ -32,6 +32,9 @@
                 <div class="Info remainderData">
                     <div class="tittleData title">Остаток</div>
                     <p>500 BYN</p>
+                    <p>500 RUB</p>
+                    <p>500 USD</p>
+                    <p>500 EUR</p>
                 </div>
                 <div class="Data incomeData">
                     <div class="tittleData title">Доход</div>
