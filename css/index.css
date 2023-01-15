@@ -126,6 +126,19 @@ body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info
 body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info .tittleData, body main .infoMain .Data_Info .Info button {
   color: rgb(255, 255, 255);
 }
+body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Info .tittleData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body main .infoMain .Data_Info .Data .tittleData img, body main .infoMain .Data_Info .Info .tittleData img {
+  margin-right: 4px;
+  width: 32px;
+  height: 30px;
+}
 body main .infoMain .Data_Info .Data input::-webkit-input-placeholder, body main .infoMain .Data_Info .Data textarea::-webkit-input-placeholder, body main .infoMain .Data_Info .Info input::-webkit-input-placeholder, body main .infoMain .Data_Info .Info textarea::-webkit-input-placeholder {
   color: rgb(255, 255, 255);
 }
@@ -153,7 +166,7 @@ body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Inf
   cursor: pointer;
 }
 body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Info .tittleData {
-  width: 50px;
+  width: 80%;
   font-size: 18px;
 }
 body main .infoMain .Data_Info .Data .incomeTitle, body main .infoMain .Data_Info .Info .incomeTitle {
