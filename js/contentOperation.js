@@ -1,29 +1,27 @@
 import { preloader } from "./preloader.js";
 const dataOperation = document.querySelectorAll(".Data");
 
-console.log(dataOperation)
-
 dataOperation.forEach(e => {
     let btnSend = e.querySelector(".btnSend");
     btnSend.addEventListener('click',() => {
         preloader(true);
-        let date = e.querySelector(".dateSend").value;
-        let opirationName = e.querySelector(".opirationName").value;
-        let sum = e.querySelector(".sum").value;
-        let description = e.querySelector(".description").value;
+        let date = e.querySelector(".dateSend");
+        let opirationName = e.querySelector(".opirationName");
+        let sum = e.querySelector(".sum");
+        let description = e.querySelector(".description");
         let statusSend = btnSend.classList[1];
         // AJAX
         const request = new XMLHttpRequest();
         const url = "action/sendOpertion.php";
-        const params = "date=" + date+"&opirationName=" + opirationName+"&sum=" + sum+"&description=" + description+"&statusSend=" + statusSend;
+        const params = "date=" + date.value+"&opirationName=" + opirationName.value+"&sum=" + sum.value+"&description=" + description.value+"&statusSend=" + statusSend;
         request.open("POST", url, true); request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.addEventListener("readystatechange", () => {
             if(request.readyState === 4 && request.status === 200) {
                 updateTable()
-                date = "";
-                opirationName = "";
-                sum = "";
-                description = "";
+                date.value = "";
+                opirationName.value = "";
+                sum.value = "";
+                description.value = "";
                 preloader(false);
             }
         });
