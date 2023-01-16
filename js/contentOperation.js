@@ -1,3 +1,4 @@
+import { preloader } from "./preloader.js";
 const dataOperation = document.querySelectorAll(".Data");
 
 console.log(dataOperation)
@@ -5,6 +6,7 @@ console.log(dataOperation)
 dataOperation.forEach(e => {
     let btnSend = e.querySelector(".btnSend");
     btnSend.addEventListener('click',() => {
+        preloader(true);
         let date = e.querySelector(".dateSend").value;
         let opirationName = e.querySelector(".opirationName").value;
         let sum = e.querySelector(".sum").value;
@@ -22,6 +24,7 @@ dataOperation.forEach(e => {
                 opirationName = "";
                 sum = "";
                 description = "";
+                preloader(false);
             }
         });
         request.send(params);

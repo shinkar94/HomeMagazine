@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Домашний Журнал</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 <body>
-    <?php 
+    <?php
+        require "modules/preloader/preloader.php";
+
         $connMoney = new mysqli('localhost','root','root','homemagazine');
         $db_money = mysqli_query($connMoney,
             "SELECT 
