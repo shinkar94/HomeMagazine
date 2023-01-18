@@ -22,10 +22,10 @@
     echo '
     <header>
         <div class="Toolbar">
-            <button class="btn btnBar"><img src="" alt=""><p>Список Доходов</p></button>
-            <button class="btn btnBar"><img src="" alt=""><p>Список Расходов</p></button>
-            <button class="btn btnBar"><img src="" alt=""><p>Журнал Категорий</p></button>
-            <button class="btn btnBar"><img src="" alt=""><p>Анализ</p></button>
+            <button class="btn btnBar"><img src="img/icon/sps.png" alt="sps"><p class="textBtnBar">Список Доходов</p></button>
+            <button class="btn btnBar"><img src="img/icon/sps.png" alt="sps"><p class="textBtnBar">Список Расходов</p></button>
+            <button class="btn btnBar"><img src="img/icon/zhur.png" alt="zhur"><p class="textBtnBar">Журнал Категорий</p></button>
+            <button class="btn btnBar"><img src="img/icon/analiz.png" alt="analiz"><p class="textBtnBar">Анализ</p></button>
         </div>
     </header>
     <main>

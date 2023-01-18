@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,100&family=Lobster&display=swap");
 body {
   padding: 0%;
   margin: 0%;
@@ -24,12 +26,42 @@ body header .Toolbar {
   padding: 10px;
 }
 body header .Toolbar .btn {
+  position: relative;
+  overflow: hidden;
+  height: 80px;
   width: 25%;
   cursor: pointer;
   border: 0;
   background-color: rgb(255, 255, 255);
   -webkit-box-shadow: var(--btnColShad);
           box-shadow: var(--btnColShad);
+}
+body header .Toolbar .btn p {
+  font-size: 22px;
+  font-family: JetBrains;
+  margin: 4px;
+  text-align: left;
+}
+body header .Toolbar .btn img {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  width: 32px;
+}
+body header .Toolbar .btn:hover {
+  color: rgb(255, 255, 255);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 255, 0.6)), to(rgba(135, 206, 235, 0.6)));
+  background-image: linear-gradient(0deg, rgba(0, 0, 255, 0.6) 0%, rgba(135, 206, 235, 0.6) 100%);
+}
+body header .Toolbar .btn:hover img {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  top: 20px;
+}
+body header .Toolbar .btn:hover p {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  margin-left: 42px;
 }
 body main {
   display: -webkit-box;
