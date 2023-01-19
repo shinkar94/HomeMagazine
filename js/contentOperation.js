@@ -1,6 +1,7 @@
 import { preloader } from "./preloader.js";
 const dataOperation = document.querySelectorAll(".Data");
 
+// расход - доход
 dataOperation.forEach(e => {
     let btnSend = e.querySelector(".btnSend");
     btnSend.addEventListener('click',() => {
@@ -10,6 +11,7 @@ dataOperation.forEach(e => {
         let sum = e.querySelector(".sum");
         let description = e.querySelector(".description");
         let statusSend = btnSend.classList[1];
+        
         // AJAX
         const request = new XMLHttpRequest();
         const url = "action/sendOpertion.php";
@@ -22,7 +24,6 @@ dataOperation.forEach(e => {
                 opirationName.value = "";
                 sum.value = "";
                 description.value = "";
-                preloader(false);
             }
         });
         request.send(params);
@@ -41,6 +42,7 @@ function updateTable(){
         if (x.status == 200 && x.readyState == 4) {
             let post = x.responseText;
             TABLE_OP.innerHTML = post;
+            preloader(false);
         }
     }
 }
