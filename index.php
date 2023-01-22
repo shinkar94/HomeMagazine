@@ -47,7 +47,7 @@
                     </div>';
                     $db_card = mysqli_query($connMoney,  "SELECT 
                     (SELECT SUM(a.money) FROM `movement` a WHERE a.Operation = '0001') -
-                    (SELECT SUM(b.money) FROM `movement` b WHERE b.Operation = '0002') -
+                    (SELECT SUM(b.money) FROM `movement` b WHERE b.Operation = '0002' and b.checkName = 'Card') -
                     (SELECT SUM(c.money) FROM `movement` c WHERE c.Operation = '0003') as countCard");
                     $countDb = mysqli_fetch_assoc($db_card);
                     echo '
@@ -58,7 +58,10 @@
                         <div class="countMoney"><img src="img/flag/eur.png" alt=""><p>'.round($countDb['countCard'] / 2.80).'</p><p class="flagName">EUR</p></div>
                         <div class="countMoney"><img src="img/flag/rub.png" alt=""><p>'.round(($countDb['countCard'] / 3.8) * 100).'</p><p class="flagName">RUB</p></div>
                     </div>';
-                    $db_cash = mysqli_query($connMoney, "SELECT SUM(`money`) as cashe FROM `movement` WHERE `Operation` = '0003'");
+                    $db_cash = mysqli_query($connMoney, 
+                    "SELECT 
+                    (SELECT SUM(a.money) FROM `movement` a WHERE a.Operation = '0003') -
+                    (SELECT SUM(b.money) FROM `movement` b WHERE b.Operation = '0002' and b.checkName = 'Cash') as cashe");
                     $countDb = mysqli_fetch_assoc($db_cash);
                     echo '
                     <div class="Info remainderData">
@@ -115,6 +118,20 @@
                             <option>Кафе</option>
                             <option>Другое</option>
                         </select>
+                        <div class="checkRadio">
+                            <div class="blockRadio">
+                                <input type="radio" name="checkName" class="checkName" value="Card"> 
+                                <p>Карта</p>
+                            </div>
+                            <div class="blockRadio">
+                                <input type="radio" name="checkName" class="checkName" value="Cash">
+                                <p>Наличные</p>
+                            </div>
+                            <div class="blockRadio">
+                                <input type="radio" name="checkName" class="checkName" value="Pillow"> 
+                                <p>Падушка</p>
+                            </div>              
+                        </div>
                         <input type="text" class="sum" placeholder="СУММА">
                         <textarea class="description" placeholder="Описание"></textarea>
                         <button class="btnSend expenseBtn">Отправить</button>

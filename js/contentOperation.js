@@ -1,6 +1,17 @@
 import { preloader } from "./preloader.js";
 const dataOperation = document.querySelectorAll(".Data");
+const checkControl = document.querySelectorAll(".checkName");
 
+// поиск чека
+function searchNameCheck(){
+    let nameCheck = "false";
+    checkControl.forEach(check => {
+        if(check.checked){
+            nameCheck = check.value;
+        }
+    })
+    return nameCheck;
+}
 // расход - доход
 dataOperation.forEach(e => {
     let btnSend = e.querySelector(".btnSend");
@@ -11,22 +22,31 @@ dataOperation.forEach(e => {
         let sum = e.querySelector(".sum");
         let description = e.querySelector(".description");
         let statusSend = btnSend.classList[1];
+        let nameCheck;
+        statusSend === "expenseBtn" ? nameCheck = searchNameCheck() : nameCheck = "false"; 
         
-        // AJAX
-        const request = new XMLHttpRequest();
-        const url = "action/sendOpertion.php";
-        const params = "date=" + date.value+"&opirationName=" + opirationName.value+"&sum=" + sum.value+"&description=" + description.value+"&statusSend=" + statusSend;
-        request.open("POST", url, true); request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.addEventListener("readystatechange", () => {
-            if(request.readyState === 4 && request.status === 200) {
-                updateTable()
-                date.value = "";
-                opirationName.value = "";
-                sum.value = "";
-                description.value = "";
-            }
-        });
-        request.send(params);
+        if(statusSend === "expenseBtn" && nameCheck === "false"){
+            alert("Ошибка!! Не выбран журнал расхода!");
+            preloader(false);
+        }else{
+            // AJAX
+            const request = new XMLHttpRequest();
+            const url = "action/sendOpertion.php";
+            const params = "date=" + date.value+"&opirationName=" + opirationName.value+"&sum=" + sum.value+"&description=" + description.value+
+            "&statusSend=" + statusSend+"&nameCheck=" + nameCheck;
+            request.open("POST", url, true); request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            request.addEventListener("readystatechange", () => {
+                if(request.readyState === 4 && request.status === 200) {
+                    updateTable()
+                    date.value = "";
+                    opirationName.value = "";
+                    sum.value = "";
+                    description.value = "";
+                }
+            });
+            request.send(params);
+        }
+        
     })
 });
 
