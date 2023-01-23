@@ -20,7 +20,8 @@
                 switch ($row['Operation']){
                     case '0001': $operation = 'Доход'; break;
                     case '0002': $operation = 'Расход'; break;
-                    case '0003': $operation = 'Перевод'; break;
+                    case '0003': $operation = 'Перевод в наличные'; break;
+                    case '0004': $operation = 'Перевод в падушку'; break;
                     default: $operation = "ERROR"; break;
                 }
                 if($row['Operation'])

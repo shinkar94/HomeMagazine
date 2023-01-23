@@ -10,7 +10,6 @@
     switch($statusSend){
         case "incomeBtn": $globalOP = "0001"; break;
         case "expenseBtn": $globalOP = "0002"; break;
-        case "translationBtn": $globalOP = "0003"; break;
         default: echo 'ERROR globalOP'; break;
     }
 
