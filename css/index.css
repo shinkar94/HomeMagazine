@@ -4,16 +4,22 @@ body {
   padding: 0%;
   margin: 0%;
   border: 0;
-  background-color: rgb(240, 242, 250);
-  --backgroundBlock: rgb(250,250,250);
-  --backgroundBtnHover: rgba(0, 71, 179, 0.3);
-  --bkgActBtnHov: rgba(0, 71, 179, 0.7);
-  --boxOpen: 2px 2px 5px rgb(216, 216, 216),
-  inset -2px -2px 5px rgb(216, 216, 216),
-  inset 2px 2px 5px rgb(216, 216, 216);
-  --boxHover: inset -4px -4px 5px rgb(216, 216, 216),
-  inset 4px 4px 5px rgb(216, 216, 216);
-  --btnColShad: 2px 2px 5px rgb(0,0,0);
+  background-color: rgb(75, 75, 75);
+  --backgroundBlock: rgb(75, 75, 75);
+  --backgroundBtnHover: linear-gradient(225deg, #520000, #450000);
+  --bkgActBtnHov: rgba(0, 72, 179, 0.411);
+  --tdBack: linear-gradient(225deg, #007b94, #00687c);
+  --titleBack:rgb(197, 120, 31);
+  --btnColShad: 7px 7px 14px #404040,
+  -7px -7px 14px #565656;
+  --gradBack: linear-gradient(145deg, #444444, #505050);
+  --gradBack2: linear-gradient(145deg, #505050, #444444);
+  --shadowIns: inset 5px 5px 10px #404040,
+  inset -5px -5px 10px #565656;
+  --shadowInsInput: inset 2px 2px 5px #404040,
+  inset -2px -2px 5px #565656;
+  --shadowInsBorder: 5px 5px 10px #2b2a2a,
+  -5px -5px 10px #565656;
 }
 body header .Toolbar {
   display: -webkit-box;
@@ -32,9 +38,9 @@ body header .Toolbar .btn {
   width: 25%;
   cursor: pointer;
   border: 0;
-  background-color: rgb(255, 255, 255);
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
+  background: var(--backgroundBlock);
+  -webkit-box-shadow: var(--shadowIns);
+          box-shadow: var(--shadowIns);
 }
 body header .Toolbar .btn p {
   font-size: 22px;
@@ -50,8 +56,7 @@ body header .Toolbar .btn img {
 }
 body header .Toolbar .btn:hover {
   color: rgb(255, 255, 255);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 255, 0.6)), to(rgba(135, 206, 235, 0.6)));
-  background-image: linear-gradient(0deg, rgba(0, 0, 255, 0.6) 0%, rgba(135, 206, 235, 0.6) 100%);
+  background: var(--tdBack);
 }
 body header .Toolbar .btn:hover img {
   -webkit-transition: all 0.5s ease-out;
@@ -79,8 +84,6 @@ body main {
 }
 body main .btnPanel, body main .bdInfo {
   max-width: 15%;
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
   border-radius: 5px;
 }
 body main .btnPanel {
@@ -89,23 +92,23 @@ body main .btnPanel {
 }
 body main .btnPanel .btnMenu {
   width: 100%;
-  height: 30px;
+  height: 90px;
   border-radius: 5px;
   border: 0;
   margin-bottom: 4px;
   cursor: pointer;
-  background-color: rgb(255, 255, 255);
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
-  background-color: var(--backgroundBtnHover);
+  -webkit-box-shadow: -1px 1px 5px #404040, 1px -1px 5px #565656, 0 0 0 2px #323232;
+          box-shadow: -1px 1px 5px #404040, 1px -1px 5px #565656, 0 0 0 2px #323232;
+  background: var(--backgroundBlock);
 }
 body main .btnPanel .btnMenu:hover {
   background-color: var(--bkgActBtnHov);
   color: rgb(250, 250, 250);
 }
 body main .infoMain {
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
+  background: var(--backgroundBlock);
+  -webkit-box-shadow: var(--shadowIns);
+          box-shadow: var(--shadowIns);
   border-radius: 5px;
   padding: 5px;
   width: 70%;
@@ -138,9 +141,10 @@ body main .infoMain .Data_Info .Data, body main .infoMain .Data_Info .Info, body
           align-items: center;
   border-radius: 10px;
   padding: 5px;
-  margin: 4px;
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
+  margin: 10px;
+  background: var(--gradBack2);
+  -webkit-box-shadow: var(--shadowInsBorder);
+          box-shadow: var(--shadowInsBorder);
 }
 body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data input, body main .infoMain .Data_Info .Data select, body main .infoMain .Data_Info .Data textarea, body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info .tittleData, body main .infoMain .Data_Info .Info input, body main .infoMain .Data_Info .Info select, body main .infoMain .Data_Info .Info textarea, body main .infoMain .Data_Info .Info button, body main .infoMain .Data_Info .Translation .tittleData, body main .infoMain .Data_Info .Translation input, body main .infoMain .Data_Info .Translation select, body main .infoMain .Data_Info .Translation textarea, body main .infoMain .Data_Info .Translation button, body main .infoMain .Infos_Panel .Data .tittleData, body main .infoMain .Infos_Panel .Data input, body main .infoMain .Infos_Panel .Data select, body main .infoMain .Infos_Panel .Data textarea, body main .infoMain .Infos_Panel .Data button, body main .infoMain .Infos_Panel .Info .tittleData, body main .infoMain .Infos_Panel .Info input, body main .infoMain .Infos_Panel .Info select, body main .infoMain .Infos_Panel .Info textarea, body main .infoMain .Infos_Panel .Info button, body main .infoMain .Infos_Panel .Translation .tittleData, body main .infoMain .Infos_Panel .Translation input, body main .infoMain .Infos_Panel .Translation select, body main .infoMain .Infos_Panel .Translation textarea, body main .infoMain .Infos_Panel .Translation button {
   width: 90%;
@@ -150,10 +154,12 @@ body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info
   border: 0;
   padding: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
-  background-color: rgba(0, 0, 0, 0.651);
-  color: rgb(255, 255, 255);
+  -webkit-box-shadow: var(--shadowInsInput);
+          box-shadow: var(--shadowInsInput);
+  background: var(--backgroundBlock);
+  color: rgb(215, 215, 215);
+  font-weight: bold;
+  text-shadow: 0px 1px rgb(0, 0, 0);
 }
 body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info .tittleData, body main .infoMain .Data_Info .Info button, body main .infoMain .Data_Info .Translation .tittleData, body main .infoMain .Data_Info .Translation button, body main .infoMain .Infos_Panel .Data .tittleData, body main .infoMain .Infos_Panel .Data button, body main .infoMain .Infos_Panel .Info .tittleData, body main .infoMain .Infos_Panel .Info button, body main .infoMain .Infos_Panel .Translation .tittleData, body main .infoMain .Infos_Panel .Translation button {
   color: rgb(255, 255, 255);
@@ -165,6 +171,9 @@ body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: var(--tdBack);
+  -webkit-box-shadow: inset 1px 1px 5px rgb(0, 0, 0);
+          box-shadow: inset 1px 1px 5px rgb(0, 0, 0);
 }
 body main .infoMain .Data_Info .Data .tittleData img, body main .infoMain .Data_Info .Info .tittleData img, body main .infoMain .Data_Info .Translation .tittleData img, body main .infoMain .Infos_Panel .Data .tittleData img, body main .infoMain .Infos_Panel .Info .tittleData img, body main .infoMain .Infos_Panel .Translation .tittleData img {
   margin-right: 4px;
@@ -172,37 +181,66 @@ body main .infoMain .Data_Info .Data .tittleData img, body main .infoMain .Data_
   height: 30px;
 }
 body main .infoMain .Data_Info .Data input::-webkit-input-placeholder, body main .infoMain .Data_Info .Data textarea::-webkit-input-placeholder, body main .infoMain .Data_Info .Info input::-webkit-input-placeholder, body main .infoMain .Data_Info .Info textarea::-webkit-input-placeholder, body main .infoMain .Data_Info .Translation input::-webkit-input-placeholder, body main .infoMain .Data_Info .Translation textarea::-webkit-input-placeholder, body main .infoMain .Infos_Panel .Data input::-webkit-input-placeholder, body main .infoMain .Infos_Panel .Data textarea::-webkit-input-placeholder, body main .infoMain .Infos_Panel .Info input::-webkit-input-placeholder, body main .infoMain .Infos_Panel .Info textarea::-webkit-input-placeholder, body main .infoMain .Infos_Panel .Translation input::-webkit-input-placeholder, body main .infoMain .Infos_Panel .Translation textarea::-webkit-input-placeholder {
-  color: rgb(255, 255, 255);
+  color: rgb(215, 215, 215);
 }
 body main .infoMain .Data_Info .Data input::-moz-placeholder, body main .infoMain .Data_Info .Data textarea::-moz-placeholder, body main .infoMain .Data_Info .Info input::-moz-placeholder, body main .infoMain .Data_Info .Info textarea::-moz-placeholder, body main .infoMain .Data_Info .Translation input::-moz-placeholder, body main .infoMain .Data_Info .Translation textarea::-moz-placeholder, body main .infoMain .Infos_Panel .Data input::-moz-placeholder, body main .infoMain .Infos_Panel .Data textarea::-moz-placeholder, body main .infoMain .Infos_Panel .Info input::-moz-placeholder, body main .infoMain .Infos_Panel .Info textarea::-moz-placeholder, body main .infoMain .Infos_Panel .Translation input::-moz-placeholder, body main .infoMain .Infos_Panel .Translation textarea::-moz-placeholder {
-  color: rgb(255, 255, 255);
+  color: rgb(215, 215, 215);
 }
 body main .infoMain .Data_Info .Data input:-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea:-ms-input-placeholder, body main .infoMain .Data_Info .Info input:-ms-input-placeholder, body main .infoMain .Data_Info .Info textarea:-ms-input-placeholder, body main .infoMain .Data_Info .Translation input:-ms-input-placeholder, body main .infoMain .Data_Info .Translation textarea:-ms-input-placeholder, body main .infoMain .Infos_Panel .Data input:-ms-input-placeholder, body main .infoMain .Infos_Panel .Data textarea:-ms-input-placeholder, body main .infoMain .Infos_Panel .Info input:-ms-input-placeholder, body main .infoMain .Infos_Panel .Info textarea:-ms-input-placeholder, body main .infoMain .Infos_Panel .Translation input:-ms-input-placeholder, body main .infoMain .Infos_Panel .Translation textarea:-ms-input-placeholder {
-  color: rgb(255, 255, 255);
+  color: rgb(215, 215, 215);
 }
 body main .infoMain .Data_Info .Data input::-ms-input-placeholder, body main .infoMain .Data_Info .Data textarea::-ms-input-placeholder, body main .infoMain .Data_Info .Info input::-ms-input-placeholder, body main .infoMain .Data_Info .Info textarea::-ms-input-placeholder, body main .infoMain .Data_Info .Translation input::-ms-input-placeholder, body main .infoMain .Data_Info .Translation textarea::-ms-input-placeholder, body main .infoMain .Infos_Panel .Data input::-ms-input-placeholder, body main .infoMain .Infos_Panel .Data textarea::-ms-input-placeholder, body main .infoMain .Infos_Panel .Info input::-ms-input-placeholder, body main .infoMain .Infos_Panel .Info textarea::-ms-input-placeholder, body main .infoMain .Infos_Panel .Translation input::-ms-input-placeholder, body main .infoMain .Infos_Panel .Translation textarea::-ms-input-placeholder {
-  color: rgb(255, 255, 255);
+  color: rgb(215, 215, 215);
 }
 body main .infoMain .Data_Info .Data input::placeholder, body main .infoMain .Data_Info .Data textarea::placeholder, body main .infoMain .Data_Info .Info input::placeholder, body main .infoMain .Data_Info .Info textarea::placeholder, body main .infoMain .Data_Info .Translation input::placeholder, body main .infoMain .Data_Info .Translation textarea::placeholder, body main .infoMain .Infos_Panel .Data input::placeholder, body main .infoMain .Infos_Panel .Data textarea::placeholder, body main .infoMain .Infos_Panel .Info input::placeholder, body main .infoMain .Infos_Panel .Info textarea::placeholder, body main .infoMain .Infos_Panel .Translation input::placeholder, body main .infoMain .Infos_Panel .Translation textarea::placeholder {
-  color: rgb(255, 255, 255);
+  color: rgb(215, 215, 215);
 }
 body main .infoMain .Data_Info .Data select, body main .infoMain .Data_Info .Info select, body main .infoMain .Data_Info .Translation select, body main .infoMain .Infos_Panel .Data select, body main .infoMain .Infos_Panel .Info select, body main .infoMain .Infos_Panel .Translation select {
   width: 94%;
   padding: 0px;
   height: 28px;
 }
-body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info button, body main .infoMain .Data_Info .Translation button, body main .infoMain .Infos_Panel .Data button, body main .infoMain .Infos_Panel .Info button, body main .infoMain .Infos_Panel .Translation button {
-  width: 94%;
-  height: 28px;
-  background-color: rgb(0, 173, 0);
+body main .infoMain .Data_Info .Data .btnSend, body main .infoMain .Data_Info .Info .btnSend, body main .infoMain .Data_Info .Translation .btnSend, body main .infoMain .Infos_Panel .Data .btnSend, body main .infoMain .Infos_Panel .Info .btnSend, body main .infoMain .Infos_Panel .Translation .btnSend {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: var(--backgroundBlock);
+  background-size: 400%;
+  color: #fff;
   cursor: pointer;
+}
+body main .infoMain .Data_Info .Data .btnSend:hover::before, body main .infoMain .Data_Info .Info .btnSend:hover::before, body main .infoMain .Data_Info .Translation .btnSend:hover::before, body main .infoMain .Infos_Panel .Data .btnSend:hover::before, body main .infoMain .Infos_Panel .Info .btnSend:hover::before, body main .infoMain .Infos_Panel .Translation .btnSend:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+body main .infoMain .Data_Info .Data .button-content, body main .infoMain .Data_Info .Info .button-content, body main .infoMain .Data_Info .Translation .button-content, body main .infoMain .Infos_Panel .Data .button-content, body main .infoMain .Infos_Panel .Info .button-content, body main .infoMain .Infos_Panel .Translation .button-content {
+  position: relative;
+  z-index: 1;
+}
+body main .infoMain .Data_Info .Data .btnSend::before, body main .infoMain .Data_Info .Info .btnSend::before, body main .infoMain .Data_Info .Translation .btnSend::before, body main .infoMain .Infos_Panel .Data .btnSend::before, body main .infoMain .Infos_Panel .Info .btnSend::before, body main .infoMain .Infos_Panel .Translation .btnSend::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: rgb(0, 128, 0);
+  -webkit-transition: all 0.475s;
+  transition: all 0.475s;
 }
 body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Info .tittleData, body main .infoMain .Data_Info .Translation .tittleData, body main .infoMain .Infos_Panel .Data .tittleData, body main .infoMain .Infos_Panel .Info .tittleData, body main .infoMain .Infos_Panel .Translation .tittleData {
   width: 80%;
   font-size: 18px;
 }
 body main .infoMain .containerInfos .Infos_Panel .Info {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
 }
 body main .infoMain .containerInfos .Infos_Panel .Info .countMoney {
   width: 100%;
@@ -221,7 +259,7 @@ body main .infoMain .containerInfos .Infos_Panel .Info .countMoney img {
   margin-right: 4px;
 }
 body main .infoMain .containerInfos .Infos_Panel .Info .countMoney p {
-  color: rgba(251, 255, 5, 0.897);
+  color: rgba(212, 216, 0, 0.897);
   font-size: 34px;
   text-shadow: 0px 1px rgb(0, 0, 0);
   margin: 0%;
@@ -232,12 +270,6 @@ body main .infoMain .containerInfos .Infos_Panel .Info .countMoney .flagName {
 body main .infoMain .containerInfos .Infos_Panel .Info .title {
   text-align: center;
   width: 80%;
-}
-body main .infoMain .containerData .Data_Info .incomeData {
-  background-color: rgba(0, 173, 0, 0.3);
-}
-body main .infoMain .containerData .Data_Info .expenseData {
-  background-color: rgba(173, 0, 0, 0.301);
 }
 body main .infoMain .containerData .Data_Info .expenseData .checkRadio {
   display: -webkit-box;
@@ -265,13 +297,61 @@ body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRad
 body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio p {
   margin: 0%;
 }
-body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio input {
-  height: 15px;
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio input[type=radio] {
+  position: relative;
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  outline: none;
+  background: rgb(17, 17, 17);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 10px rgb(0, 0, 0), inset -2px -2px 5px rgba(255, 255, 255, 0.1), inset 2px 2px 5px rgb(0, 0, 0), 0 0 0 2px #1f1f1f;
+          box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 10px rgb(0, 0, 0), inset -2px -2px 5px rgba(255, 255, 255, 0.1), inset 2px 2px 5px rgb(0, 0, 0), 0 0 0 2px #1f1f1f;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-body main .infoMain .containerData .Data_Info .translationData {
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.3) 0%, rgba(0, 128, 0, 0.3) 100%);
+body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio input[type=radio]:checked {
+  background: rgb(45, 186, 242);
+}
+body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio input[type=radio]::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 50px;
+  height: 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#555));
+  background: linear-gradient(to top, #000, #555);
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 0 1px #232323;
+          box-shadow: 0 0 0 1px #232323;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio input[type=radio]:checked::before {
+  left: 30px;
+}
+body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio input[type=radio]::after {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: calc(50% - 2px);
+  background-color: red;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+body main .infoMain .containerData .Data_Info .expenseData .checkRadio .blockRadio input[type=radio]:checked::after {
+  left: 65px;
+  background-color: rgb(45, 186, 242);
+  -webkit-box-shadow: 0px 0px 5px rgb(45, 186, 242), 0px 0px 10px rgb(45, 186, 242), 0px 0px 15px rgb(45, 186, 242);
+          box-shadow: 0px 0px 5px rgb(45, 186, 242), 0px 0px 10px rgb(45, 186, 242), 0px 0px 15px rgb(45, 186, 242);
 }
 body main .infoMain .operations {
   display: -webkit-box;
@@ -285,22 +365,26 @@ body main .infoMain .operations table {
   border-spacing: 0;
   text-align: center;
   width: 100%;
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
   padding: 2px;
 }
 body main .infoMain .operations table tr td {
   font-size: 18px;
   height: 40px;
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
-  background-color: var(--backgroundBtnHover);
+  -webkit-box-shadow: var(--shadowInsInput);
+          box-shadow: var(--shadowInsInput);
+  background-color: var(--backgroundBlock);
+  cursor: pointer;
 }
 body main .infoMain .operations table thead {
-  background-color: rgba(0, 0, 0, 0.6);
   color: rgb(250, 250, 250);
+  text-shadow: 0 1px rgb(0, 0, 0), 0 -1px rgb(0, 0, 0);
   position: sticky;
   top: 0;
+  -webkit-box-shadow: inset 0px 0px 0px rgb(0, 0, 0);
+          box-shadow: inset 0px 0px 0px rgb(0, 0, 0);
+}
+body main .infoMain .operations table thead td {
+  background: var(--tdBack);
 }
 body main .bdInfo .itemBd {
   padding: 5px;
