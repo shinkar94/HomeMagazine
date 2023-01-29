@@ -4,8 +4,8 @@ body {
   padding: 0%;
   margin: 0%;
   border: 0;
-  background-color: rgb(75, 75, 75);
-  --backgroundBlock: rgb(75, 75, 75);
+  background-color: rgb(14, 145, 215);
+  --backgroundBlock: rgb(29,34,74);
   --backgroundBtnHover: linear-gradient(225deg, #520000, #450000);
   --bkgActBtnHov: rgba(0, 72, 179, 0.411);
   --tdBack: linear-gradient(225deg, #007b94, #00687c);
@@ -14,10 +14,6 @@ body {
   -7px -7px 14px #565656;
   --gradBack: linear-gradient(145deg, #444444, #505050);
   --gradBack2: linear-gradient(145deg, #505050, #444444);
-  --shadowIns: inset 5px 5px 10px #404040,
-  inset -5px -5px 10px #565656;
-  --shadowInsInput: inset 2px 2px 5px #404040,
-  inset -2px -2px 5px #565656;
   --shadowInsBorder: 5px 5px 10px #2b2a2a,
   -5px -5px 10px #565656;
 }
@@ -29,44 +25,83 @@ body header .Toolbar {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
+}
+body header .Toolbar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  height: 80px;
+  background: var(--backgroundBlock);
+  border-radius: 10px 0px 0px 0px;
+  text-decoration: none;
+}
+body header .Toolbar a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10%;
+  color: rgb(215, 215, 215);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(251, 43, 93);
+  font-size: 26px;
+  font-weight: bold;
+  -webkit-box-shadow: 2px 2px 2px rgb(0, 0, 0), -2px -2px 2px rgb(215, 215, 215), inset 2px 2px 2px rgba(255, 255, 255, 0.322), inset -2px -2px 2px rgba(0, 0, 0, 0.322);
+          box-shadow: 2px 2px 2px rgb(0, 0, 0), -2px -2px 2px rgb(215, 215, 215), inset 2px 2px 2px rgba(255, 255, 255, 0.322), inset -2px -2px 2px rgba(0, 0, 0, 0.322);
+}
+body header .Toolbar a p .s1, body header .Toolbar a p .s2 {
+  text-shadow: 0px 1px rgb(0, 0, 0);
+}
+body header .Toolbar a p .s1 {
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+}
+body header .Toolbar a p .s2 {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
 }
 body header .Toolbar .btn {
   position: relative;
   overflow: hidden;
   height: 80px;
-  width: 25%;
+  width: 20%;
   cursor: pointer;
   border: 0;
   background: var(--backgroundBlock);
   -webkit-box-shadow: var(--shadowIns);
           box-shadow: var(--shadowIns);
+  color: rgb(215, 215, 215);
 }
 body header .Toolbar .btn p {
   font-size: 22px;
   font-family: JetBrains;
   margin: 4px;
-  text-align: left;
+  text-align: center;
 }
 body header .Toolbar .btn img {
   position: absolute;
-  top: 100px;
-  left: 10px;
-  width: 32px;
+  left: 0%;
+  top: 0%;
+  width: 80px;
 }
 body header .Toolbar .btn:hover {
-  color: rgb(255, 255, 255);
-  background: var(--tdBack);
+  border: 2px outset rgb(255, 144, 16);
+  color: rgb(255, 144, 16);
 }
-body header .Toolbar .btn:hover img {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  top: 20px;
-}
-body header .Toolbar .btn:hover p {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  margin-left: 42px;
+body header .Toolbar .btnBar4 {
+  border-radius: 0px 10px 0px 0px;
 }
 body main {
   display: -webkit-box;
@@ -75,16 +110,10 @@ body main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
   padding: 10px;
   margin: 0px 10px;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
   background-color: var(--backgroundBlock);
-}
-body main .btnPanel, body main .bdInfo {
-  max-width: 15%;
-  border-radius: 5px;
 }
 body main .btnPanel {
   padding: 5px 0px 0px 0px;
@@ -97,16 +126,23 @@ body main .btnPanel .btnMenu {
   border: 0;
   margin-bottom: 4px;
   cursor: pointer;
-  -webkit-box-shadow: -1px 1px 5px #404040, 1px -1px 5px #565656, 0 0 0 2px #323232;
-          box-shadow: -1px 1px 5px #404040, 1px -1px 5px #565656, 0 0 0 2px #323232;
+  -webkit-box-shadow: 0 0 0 2px rgb(113, 29, 79);
+          box-shadow: 0 0 0 2px rgb(113, 29, 79);
   background: var(--backgroundBlock);
+  font-size: 24px;
+  color: rgb(215, 215, 215);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 body main .btnPanel .btnMenu:hover {
-  background-color: var(--bkgActBtnHov);
-  color: rgb(250, 250, 250);
+  background: linear-gradient(-45deg, rgb(44, 46, 146), rgb(94, 32, 139));
+  text-shadow: 0px 0px 20px rgb(197, 120, 31);
+  color: rgb(255, 144, 16);
+  -webkit-box-shadow: 0 0 0 2px rgb(255, 144, 16);
+          box-shadow: 0 0 0 2px rgb(255, 144, 16);
 }
 body main .infoMain {
-  background: var(--backgroundBlock);
+  background: rgb(22, 29, 75);
   -webkit-box-shadow: var(--shadowIns);
           box-shadow: var(--shadowIns);
   border-radius: 5px;
@@ -142,9 +178,9 @@ body main .infoMain .Data_Info .Data, body main .infoMain .Data_Info .Info, body
   border-radius: 10px;
   padding: 5px;
   margin: 10px;
-  background: var(--gradBack2);
-  -webkit-box-shadow: var(--shadowInsBorder);
-          box-shadow: var(--shadowInsBorder);
+  background: linear-gradient(135deg, rgb(40, 44, 82), rgb(24, 34, 70));
+  -webkit-box-shadow: 5px 5px 10px 2px rgb(0, 0, 0), -1px -1px 1px rgb(219, 219, 219);
+          box-shadow: 5px 5px 10px 2px rgb(0, 0, 0), -1px -1px 1px rgb(219, 219, 219);
 }
 body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info .Data input, body main .infoMain .Data_Info .Data select, body main .infoMain .Data_Info .Data textarea, body main .infoMain .Data_Info .Data button, body main .infoMain .Data_Info .Info .tittleData, body main .infoMain .Data_Info .Info input, body main .infoMain .Data_Info .Info select, body main .infoMain .Data_Info .Info textarea, body main .infoMain .Data_Info .Info button, body main .infoMain .Data_Info .Translation .tittleData, body main .infoMain .Data_Info .Translation input, body main .infoMain .Data_Info .Translation select, body main .infoMain .Data_Info .Translation textarea, body main .infoMain .Data_Info .Translation button, body main .infoMain .Infos_Panel .Data .tittleData, body main .infoMain .Infos_Panel .Data input, body main .infoMain .Infos_Panel .Data select, body main .infoMain .Infos_Panel .Data textarea, body main .infoMain .Infos_Panel .Data button, body main .infoMain .Infos_Panel .Info .tittleData, body main .infoMain .Infos_Panel .Info input, body main .infoMain .Infos_Panel .Info select, body main .infoMain .Infos_Panel .Info textarea, body main .infoMain .Infos_Panel .Info button, body main .infoMain .Infos_Panel .Translation .tittleData, body main .infoMain .Infos_Panel .Translation input, body main .infoMain .Infos_Panel .Translation select, body main .infoMain .Infos_Panel .Translation textarea, body main .infoMain .Infos_Panel .Translation button {
   width: 90%;
@@ -154,8 +190,8 @@ body main .infoMain .Data_Info .Data .tittleData, body main .infoMain .Data_Info
   border: 0;
   padding: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: var(--shadowInsInput);
-          box-shadow: var(--shadowInsInput);
+  -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 4px 2px rgba(0, 0, 0, 0.3), inset 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 4px 2px rgba(0, 0, 0, 0.3), inset 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
   background: var(--backgroundBlock);
   color: rgb(215, 215, 215);
   font-weight: bold;
@@ -259,7 +295,7 @@ body main .infoMain .containerInfos .Infos_Panel .Info .countMoney img {
   margin-right: 4px;
 }
 body main .infoMain .containerInfos .Infos_Panel .Info .countMoney p {
-  color: rgba(212, 216, 0, 0.897);
+  color: rgb(215, 215, 215);
   font-size: 34px;
   text-shadow: 0px 1px rgb(0, 0, 0);
   margin: 0%;
@@ -389,6 +425,13 @@ body main .infoMain .operations table thead td {
 body main .bdInfo .itemBd {
   padding: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: var(--btnColShad);
-          box-shadow: var(--btnColShad);
+}
+body main .btnPanel, body main .bdInfo {
+  max-width: 15%;
+  border-radius: 5px;
+  background-color: var(--backgroundBlock);
+}
+body main .sendInfo {
+  -webkit-box-shadow: -5px 10px 10px 10px rgb(13, 26, 61), inset 20px 0px 30px 20px rgb(13, 26, 61);
+          box-shadow: -5px 10px 10px 10px rgb(13, 26, 61), inset 20px 0px 30px 20px rgb(13, 26, 61);
 }

@@ -14,10 +14,11 @@
     echo '
     <header>
         <div class="Toolbar">
-            <button class="btn btnBar"><img src="img/icon/sps.png" alt="sps"><p class="textBtnBar">Список Доходов</p></button>
-            <button class="btn btnBar"><img src="img/icon/sps.png" alt="sps"><p class="textBtnBar">Список Расходов</p></button>
+            <a href="index.html"><p><span class="s1">R</span><span class="s2">S</span></p></a>
+            <button class="btn btnBar1"><img src="img/icon/gf2.png" alt="sps"><p class="textBtnBar">Список Доходов</p></button>
+            <button class="btn btnBar"><img src="img/icon/gf3.png" alt="sps"><p class="textBtnBar">Список Расходов</p></button>
             <button class="btn btnBar"><img src="img/icon/zhur.png" alt="zhur"><p class="textBtnBar">Журнал Категорий</p></button>
-            <button class="btn btnBar"><img src="img/icon/analiz.png" alt="analiz"><p class="textBtnBar">Анализ</p></button>
+            <button class="btn btnBar4"><img src="img/icon/gf.png" alt="analiz"><p class="textBtnBar">Анализ</p></button>
         </div>
     </header>
     <main>
@@ -48,7 +49,7 @@
                         </select>
                         <input type="text" class="sum" placeholder="СУММА">
                         <textarea class="description" placeholder="Описание"></textarea>
-                        <button class="btnSend incomeBtn">Отправить</button> 
+                        <button class="btnSend incomeBtn"><span class="button-content">Отправить </span></button> 
                     </div>
                     <div class="Data expenseData">
                         <div class="tittleData title"><img src="img/icon/not.png" alt="imgTitle">Расход</div>
@@ -86,7 +87,7 @@
                         </div>
                         <input type="text" class="sum" placeholder="СУММА">
                         <textarea class="description" placeholder="Описание"></textarea>
-                        <button class="btnSend expenseBtn">Отправить</button>
+                        <button class="btnSend expenseBtn"><span class="button-content">Отправить </span></button>
                     </div>
                     <div class="Translation translationData">
                         <div class="tittleData title"><img src="img/icon/nn.png" alt="imgTitle">Перевод</div>
@@ -98,7 +99,7 @@
                         </select>
                         <input type="text" class="sum" placeholder="СУММА">
                         <textarea class="description" placeholder="Описание"></textarea>
-                        <button class="btnSend translationBtn">Отправить</button>
+                        <button class="btnSend translationBtn"><span class="button-content">Отправить </span></button>
                     </div>
                 </div>
             </div>
